@@ -1,0 +1,5 @@
+Model Name,HuggingFace ID,Parameters (M),Accuracy (%),Macro Precision,Macro Recall,Macro F1-Score,Macro ROC-AUC,Micro ROC-AUC,Training Time (s),Latency (ms/sample)
+BERT (bert-base-uncased),bert-base-uncased,109.49,100.0,1.0,1.0,1.0,1.0,1.0,115.2,5.83
+RoBERTa (roberta-base),roberta-base,124.65,100.0,1.0,1.0,1.0,1.0,1.0,119.9,5.54
+DeBERTa (deberta-base),microsoft/deberta-base,139.2,100.0,1.0,1.0,1.0,1.0,1.0,163.0,7.66
+T5 (t5-small),t5-small,60.77,100.0,1.0,1.0,1.0,1.0,1.0,86.7,4.34

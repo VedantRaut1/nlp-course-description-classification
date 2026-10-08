@@ -1,0 +1,41 @@
+{
+    "best_model": "BERT (bert-base-uncased)",
+    "best_model_hf_id": "bert-base-uncased",
+    "best_accuracy": 100.0,
+    "best_f1_macro": 1.0,
+    "best_roc_auc_macro": 1.0,
+    "models_comparison": [
+        {
+            "name": "BERT (bert-base-uncased)",
+            "accuracy": 100.0,
+            "f1_macro": 1.0,
+            "roc_auc_macro": 1.0,
+            "latency_ms": 5.83,
+            "params_M": 109.49
+        },
+        {
+            "name": "RoBERTa (roberta-base)",
+            "accuracy": 100.0,
+            "f1_macro": 1.0,
+            "roc_auc_macro": 1.0,
+            "latency_ms": 5.54,
+            "params_M": 124.65
+        },
+        {
+            "name": "DeBERTa (deberta-base)",
+            "accuracy": 100.0,
+            "f1_macro": 1.0,
+            "roc_auc_macro": 1.0,
+            "latency_ms": 7.66,
+            "params_M": 139.2
+        },
+        {
+            "name": "T5 (t5-small)",
+            "accuracy": 100.0,
+            "f1_macro": 1.0,
+            "roc_auc_macro": 1.0,
+            "latency_ms": 4.34,
+            "params_M": 60.77
+        }
+    ]
+}

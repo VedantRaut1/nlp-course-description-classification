@@ -1,0 +1,67 @@
+{
+    "total_courses": 3000,
+    "split_ratio_description": "60% Train, 20% Validation (internal from 80% pool), 20% Held-out Test",
+    "train_samples": 1800,
+    "val_samples": 600,
+    "test_samples": 600,
+    "train_percentage": 60.0,
+    "val_percentage": 20.0,
+    "test_percentage": 20.0,
+    "num_disciplines": 10,
+    "disciplines": [
+        "Computer Science",
+        "Electronics",
+        "Mechanical",
+        "Civil",
+        "Business",
+        "Mathematics",
+        "Chemical Engineering",
+        "Biotechnology",
+        "Physics",
+        "Humanities"
+    ],
+    "category_distribution_train": {
+        "Mechanical": 180,
+        "Civil": 180,
+        "Computer Science": 180,
+        "Business": 180,
+        "Physics": 180,
+        "Chemical Engineering": 180,
+        "Biotechnology": 180,
+        "Electronics": 180,
+        "Mathematics": 180,
+        "Humanities": 180
+    },
+    "category_distribution_val": {
+        "Mechanical": 60,
+        "Humanities": 60,
+        "Physics": 60,
+        "Computer Science": 60,
+        "Electronics": 60,
+        "Biotechnology": 60,
+        "Business": 60,
+        "Mathematics": 60,
+        "Chemical Engineering": 60,
+        "Civil": 60
+    },
+    "category_distribution_test": {
+        "Computer Science": 60,
+        "Biotechnology": 60,
+        "Business": 60,
+        "Physics": 60,
+        "Civil": 60,
+        "Mechanical": 60,
+        "Mathematics": 60,
+        "Chemical Engineering": 60,
+        "Electronics": 60,
+        "Humanities": 60
+    },
+    "sources": {
+        "UC Berkeley Academic Guide": 528,
+        "Harvard University Course Catalog": 521,
+        "Stanford Engineering Catalog": 516,
+        "edX": 487,
+        "MIT OpenCourseWare": 478,
+        "Coursera": 470
+    }
+}
