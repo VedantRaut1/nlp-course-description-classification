@@ -114,6 +114,40 @@ Two dedicated dashboard interfaces are provided:
 - **Default Best Model Dashboard**: [http://127.0.0.1:5000/](http://127.0.0.1:5000/) - Direct inference using the production winning model.
 - **Model Selector & Multi-Model Comparison Dashboard**: [http://127.0.0.1:5000/select](http://127.0.0.1:5000/select) - Allows selecting any of the 4 transformer models (BERT, RoBERTa, DeBERTa, T5) or running all 4 models simultaneously to compare classifications side-by-side.
 
+#### Option 4: Direct Testing via Serialized Python Pickle (`.pkl`) File
+As required for standard Python/ML evaluation, the winning fine-tuned model is serialized into standard **`.pkl` format**:
+- **File Location**: `models/best_model.pkl` (also mirrored at `best_model.pkl`)
+- **Run the .pkl test suite**:
+  ```bash
+  python test_pkl_model.py --run-suite
+  ```
+- **Test custom course descriptions with .pkl**:
+  ```bash
+  python test_pkl_model.py --text "Thermodynamic cycles, Rankine and Brayton power plants, heat exchangers."
+  ```
+- **Direct Python Code for Sir to test the .pkl file**:
+  ```python
+  import pickle
+  import torch
+
+  # 1. Load the model bundle
+  with open("models/best_model.pkl", "rb") as f:
+      bundle = pickle.load(f)
+
+  model = bundle["model"]
+  tokenizer = bundle["tokenizer"]
+  id2label = bundle["id2label"]
+
+  # 2. Run inference
+  text = "Design and analysis of divide-and-conquer algorithms, dynamic programming and Dijkstra."
+  inputs = tokenizer(text, truncation=True, max_length=128, return_tensors="pt")
+  with torch.no_grad():
+      logits = model(**inputs).logits
+      pred_id = int(torch.argmax(logits, dim=1))
+
+  print(f"Predicted Discipline: {id2label[pred_id]}")
+  ```
+
 ---
 
 ### Curated Test Suite: Sample Inputs & Model Predictions

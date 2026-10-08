@@ -107,6 +107,16 @@ Two dashboards are available:
 1. **Default Best Model Dashboard**: [http://127.0.0.1:5000/](http://127.0.0.1:5000/) - Quick testing with the production-winning model.
 2. **Model Selector & Comparison Dashboard**: [http://127.0.0.1:5000/select](http://127.0.0.1:5000/select) - Interactively select between BERT, RoBERTa, DeBERTa, and T5, or run all 4 models simultaneously to compare predictions and latency side-by-side.
 
+### Option E: Test the Serialized Pickle (.pkl) Model
+The winning model is also exported as a standard Python pickle file at `models/best_model.pkl`:
+```bash
+# Run curated test suite via .pkl file
+python test_pkl_model.py --run-suite
+
+# Direct prediction using .pkl file
+python test_pkl_model.py --text "Thermodynamic cycles, Rankine and Brayton power plants, heat exchangers."
+```
+
 ---
 
 ## 5. Repository Structure

@@ -17,6 +17,7 @@ __pycache__/
 *.pth
 *.ckpt
 *.onnx
+*.pkl
 
 # Temporary directories and caches
 .cache/
